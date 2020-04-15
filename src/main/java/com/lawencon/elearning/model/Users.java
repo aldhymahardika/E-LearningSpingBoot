@@ -22,6 +22,9 @@ public class Users {
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Categories category;
+	
+	@Column(nullable = false)
+	private String nama, password;
 
 	public String getUserId() {
 		return userId;
@@ -46,5 +49,23 @@ public class Users {
 	public void setId(String id) {
 		this.userId = id;
 	}
+
+	public String getNama() {
+		return nama;
+	}
+
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
 
 }
