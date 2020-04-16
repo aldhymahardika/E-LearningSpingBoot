@@ -30,7 +30,7 @@ public class PengajarController extends BaseController<Pengajar>{
 	}
 	
 	@PostMapping("/insert")
-	public ResponseEntity<?> insertPengajar(@RequestBody String body){
+	public ResponseEntity<String> insertPengajar(@RequestBody String body){
 		try {
 			Pengajar pengajar = readValue(body, Pengajar.class);
 			pengajarService.insertPengajar(pengajar);

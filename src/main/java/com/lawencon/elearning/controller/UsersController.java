@@ -38,7 +38,7 @@ public class UsersController extends BaseController<Users>{
 	}
 	
 	@GetMapping("/userid")
-	public ResponseEntity<?> getByEmailMapper(@RequestParam("id") String id){
+	public ResponseEntity<?> getById(@RequestParam("id") String id){
 		try {
 			Map<String, Object> user = userService.getById(id).get(0);
 			return new ResponseEntity<>(user, HttpStatus.ACCEPTED);

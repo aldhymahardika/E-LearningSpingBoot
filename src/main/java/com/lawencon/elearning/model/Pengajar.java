@@ -18,6 +18,8 @@ public class Pengajar {
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(updatable = false, nullable = false)
 	private String pengajarId;
+	
+	
 	private String name;
 	private String username;
 	private String password;
